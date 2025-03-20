@@ -39,7 +39,7 @@ bool compare(pair<int, int> s1, pair<int, int> s2)
 
 void solve(void)
 {
-    // map을 vector로 변환해주기
+    // map을 vector로 변환해주기 
     for(char c = 'A'; c <= 'Z'; c++)
     {
         if (m[c])
