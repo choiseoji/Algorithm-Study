@@ -10,15 +10,8 @@ public class PS_340212 {
     public int solution(int[] diffs, int[] times, long limit) {
         int answer = 0;
 
-        // diff의 최대, 최소 구하기
-        List<Integer> list  = new ArrayList<>();
-        for(int i = 0; i < diffs.length; i++) {
-            list.add(diffs[i]);
-        }
-        Collections.sort(list);
-
-        Integer left = list.get(0);
-        Integer right = list.get(list.size() - 1);
+        Integer left = 1;
+        Integer right = 1000000;
 
         while (left <= right) {
 
@@ -43,7 +36,7 @@ public class PS_340212 {
         for(int i = 0; i < diffs.length; i++) {
 
             int time_cur = times[i];
-            int time_prev = (i == 0) ? 1 : times[i - 1];
+            int time_prev = (i == 0) ? 0 : times[i - 1];
 
             if (diffs[i] <= level) {
                 time += time_cur;
